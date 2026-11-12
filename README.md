@@ -21,6 +21,8 @@ Las cuentas nuevas y solicitudes se guardan en `localStorage` del navegador y no
 
 El cliente registra y consulta sus propias solicitudes. El administrador también puede registrar para cualquier cuenta habilitada, consultar todos los registros, editarlos, cambiar su estado y eliminarlos con confirmación. El cliente propietario se selecciona entre las cuentas habilitadas; el nombre y correo del formulario son datos de contacto de la solicitud.
 
+Para acceder, pulsa **Mi cuenta** o **Agendar cita**: el inicio de sesión y el panel se abren en una ventana. En el panel, **Registrar solicitud** muestra el formulario y el resumen cuenta solo las solicitudes visibles para el usuario. Cerrar la ventana no cierra la sesión; usa **Cerrar sesión** para salir.
+
 La placa acepta tres letras, un guion y tres o cuatro dígitos; el teléfono, de 7 a 15 dígitos. El año debe estar entre 1900 y el año actual más uno; el kilometraje debe ser un entero no negativo. Las citas nuevas no pueden ser anteriores al día actual y el horario de demostración es de 08:00 a 18:00. Al editar una cita pasada se permite mantener su fecha original.
 
 ## Limitaciones importantes

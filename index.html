@@ -1,152 +1,613 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portal educativo para solicitar mantenimiento automotriz.">
-  <title>MotorCare | Mantenimiento automotriz</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
-  <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script defer src="js/script.js"></script>
-</head>
-<body>
-  <header class="site-header">
-    <nav class="navbar navbar-expand-lg container" aria-label="Navegación principal">
-      <a class="brand" href="#inicio"><span class="brand-mark">M</span> MotorCare<span class="brand-dot">.</span></a>
-      <div class="nav-links">
-        <a href="#inicio">Inicio</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#mi-cuenta">Mi cuenta</a>
-      </div>
-      <a class="nav-cta" href="#mi-cuenta">Agendar cita <span aria-hidden="true">↗</span></a>
-    </nav>
-  </header>
-
-  <main>
-    <section id="inicio" class="hero">
-      <div class="container hero-grid">
-        <div>
-          <p class="eyebrow"><span></span> TU AUTO EN BUENAS MANOS</p>
-          <h1>Tu camino.<br>Nuestra <em>pasión.</em></h1>
-          <p class="hero-copy">Cuidamos lo que te mueve. Agenda el mantenimiento de tu vehículo de forma fácil y mantente al tanto de cada paso.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#mi-cuenta">Solicitar mantenimiento <span aria-hidden="true">↗</span></a>
-            <a class="button button-outline" href="#servicios">Explorar servicios</a>
-          </div>
-          <div class="hero-note"><span class="note-icon">✓</span> Atención profesional para cada recorrido</div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portal educativo para solicitar mantenimiento automotriz."
+    />
+    <title>MotorCare | Mantenimiento automotriz</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav
+        class="navbar navbar-expand-lg container"
+        aria-label="Navegación principal"
+      >
+        <a class="brand" href="#inicio"
+          ><span class="brand-mark">M</span> MotorCare<span class="brand-dot"
+            >.</span
+          ></a
+        >
+        <div class="nav-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#mi-cuenta">Mi cuenta</a>
         </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="visual-grid"></div>
-          <div class="car-illustration">
-            <svg viewBox="0 0 640 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M66 180l34-13 48-64c9-12 22-18 37-19l177-6c25-1 48 6 68 20l64 47 67 15c17 4 28 17 30 34l2 29H48l2-22c1-10 7-17 16-21z" fill="#dfe4ea" stroke="#fff" stroke-width="4"/>
-              <path d="M164 151l32-44 90-3v47H164zm139-48l54-2c20-1 38 5 54 16l47 34H303v-48z" fill="#263544" stroke="#fff" stroke-width="3"/>
-              <path d="M50 199h543M304 154v55M118 165h24M486 166l53 9" stroke="#a4adb8" stroke-width="4"/>
-              <circle cx="158" cy="216" r="44" fill="#141d28" stroke="#c2cbd4" stroke-width="6"/><circle cx="158" cy="216" r="22" fill="#7c8997"/>
-              <circle cx="480" cy="216" r="44" fill="#141d28" stroke="#c2cbd4" stroke-width="6"/><circle cx="480" cy="216" r="22" fill="#7c8997"/>
-              <path d="M53 180l51-10-12 16H52m493-21l39 10 5 14h-36z" fill="#f3a650"/>
-            </svg>
-          </div>
-          <div class="visual-label"><strong>01 / 03</strong><span>CONDUCE CON CONFIANZA</span></div>
-          <div class="visual-card"><span>✦</span><div><strong>Listos para ayudarte</strong><small>Solicita tu próximo servicio</small></div></div>
-        </div>
-      </div>
-      <div class="hero-bottom container"><span>CONOCE MÁS</span><span>↓</span><span class="hero-bottom-line"></span><span>MANTENIMIENTO AUTOMOTRIZ</span></div>
-    </section>
+        <a class="nav-cta" href="#mi-cuenta"
+          >Agendar cita <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+    </header>
 
-    <section id="nosotros" class="section about">
-      <div class="container about-grid">
-        <div><p class="section-label">01 / ACERCA DE NOSOTROS</p><h2>Más que un taller,<br><em>tu aliado en el camino.</em></h2></div>
-        <div><p>En MotorCare creemos que un vehículo bien cuidado te lleva más lejos. Nuestro portal te ayuda a organizar tus solicitudes y consultar su avance en un solo lugar.</p><p class="about-detail">Servicio claro. Atención cercana. Cada viaje cuenta.</p></div>
-      </div>
-    </section>
-
-    <section id="servicios" class="section services">
-      <div class="container">
-        <div class="section-heading"><div><p class="section-label">02 / NUESTROS SERVICIOS</p><h2>Todo para seguir <em>en marcha.</em></h2></div><p>El cuidado que tu vehículo necesita, en el momento indicado.</p></div>
-        <div class="service-grid">
-          <article class="service-card"><span class="service-number">01</span><span class="service-icon">◉</span><h3>Cambio de aceite</h3><p>Ayuda a mantener el motor lubricado y en buen estado.</p></article>
-          <article class="service-card"><span class="service-number">02</span><span class="service-icon">⚙</span><h3>Revisión de frenos</h3><p>Inspección de componentes esenciales para tu seguridad.</p></article>
-          <article class="service-card"><span class="service-number">03</span><span class="service-icon">◇</span><h3>Revisión general</h3><p>Una revisión preventiva para cuidar cada recorrido.</p></article>
-          <article class="service-card"><span class="service-number">04</span><span class="service-icon">✳</span><h3>Alineación y balanceo</h3><p>Cuida tus neumáticos y mejora la conducción.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="mi-cuenta" class="section account-section">
-      <div class="container">
-        <div class="section-heading"><div><p class="section-label">03 / ÁREA DE CLIENTES</p><h2>Tu próxima parada, <em>aquí.</em></h2></div><p>Inicia sesión para registrar y consultar tus solicitudes.</p></div>
-        <div class="demo-notice"><strong>Proyecto educativo.</strong> Las cuentas y sus contraseñas se guardan sin protección en este navegador. No uses contraseñas ni datos reales.</div>
-        <div id="storage-error" class="error-banner" role="alert" hidden></div>
-        <div id="login-panel" class="login-layout">
-          <div class="login-intro"><span class="login-symbol">↗</span><h3>Bienvenido<br>de nuevo.</h3><p>Accede a tu espacio para gestionar el cuidado de tu vehículo.</p></div>
-          <div class="login-card">
-            <div id="login-view">
-              <h3>Iniciar sesión</h3><p>Ingresa con una cuenta de demostración.</p>
-              <form id="login-form">
-                <label for="username">Usuario</label><input id="username" name="username" class="form-control" autocomplete="username" required>
-                <label for="password">Contraseña</label><input id="password" name="password" type="password" class="form-control" autocomplete="current-password" required>
-                <button class="button button-primary form-submit" type="submit">Ingresar <span aria-hidden="true">→</span></button>
-              </form>
-              <p class="account-switch">¿Aún no tienes cuenta? <button type="button" id="show-register" class="text-button">Crear cuenta</button></p>
-              <div class="demo-accounts"><strong>Cuentas de prueba</strong><br>Cliente: <code>cliente1</code> / <code>cliente123</code><br>Cliente: <code>cliente2</code> / <code>cliente123</code><br>Administrador: <code>admin</code> / <code>admin123</code><br>Deshabilitada: <code>inactivo</code> / <code>cliente123</code></div>
+    <main>
+      <section id="inicio" class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow"><span></span> TU AUTO EN BUENAS MANOS</p>
+            <h1>Tu camino.<br />Nuestra <em>pasión.</em></h1>
+            <p class="hero-copy">
+              Cuidamos lo que te mueve. Agenda el mantenimiento de tu vehículo
+              de forma fácil y mantente al tanto de cada paso.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#mi-cuenta"
+                >Solicitar mantenimiento <span aria-hidden="true">↗</span></a
+              >
+              <a class="button button-outline" href="#servicios"
+                >Explorar servicios</a
+              >
             </div>
-            <div id="register-view" hidden>
-              <h3>Crear cuenta</h3><p>Crea una cuenta de cliente para esta demostración.</p>
-              <form id="register-form" novalidate>
-                <label for="register-name">Nombre completo *</label><input id="register-name" name="name" class="form-control" maxlength="100" required>
-                <label for="register-email">Correo electrónico ficticio *</label><input id="register-email" name="email" type="email" class="form-control" maxlength="254" required>
-                <label for="register-username">Usuario *</label><input id="register-username" name="username" class="form-control" autocomplete="off" minlength="3" maxlength="30" aria-describedby="username-help" required>
-                <small id="username-help" class="field-help">De 3 a 30 letras sin acentos, números o guiones bajos.</small>
-                <label for="register-password">Contraseña de prueba *</label><input id="register-password" name="password" type="password" class="form-control" autocomplete="new-password" minlength="6" maxlength="100" required>
-                <label for="register-confirm">Confirmar contraseña *</label><input id="register-confirm" name="confirm" type="password" class="form-control" autocomplete="new-password" required>
-                <div id="register-error" class="form-error" role="alert" hidden></div>
-                <button class="button button-primary form-submit" type="submit">Crear cuenta <span aria-hidden="true">→</span></button>
-              </form>
-              <p class="account-switch">¿Ya tienes cuenta? <button type="button" id="show-login" class="text-button">Iniciar sesión</button></p>
+            <div class="hero-note">
+              <span class="note-icon">✓</span> Atención profesional para cada
+              recorrido
             </div>
           </div>
+          <div class="hero-visual" aria-hidden="true">
+            <div class="visual-grid"></div>
+            <div class="car-illustration">
+              <svg
+                viewBox="0 0 640 280"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M66 180l34-13 48-64c9-12 22-18 37-19l177-6c25-1 48 6 68 20l64 47 67 15c17 4 28 17 30 34l2 29H48l2-22c1-10 7-17 16-21z"
+                  fill="#dfe4ea"
+                  stroke="#fff"
+                  stroke-width="4"
+                />
+                <path
+                  d="M164 151l32-44 90-3v47H164zm139-48l54-2c20-1 38 5 54 16l47 34H303v-48z"
+                  fill="#263544"
+                  stroke="#fff"
+                  stroke-width="3"
+                />
+                <path
+                  d="M50 199h543M304 154v55M118 165h24M486 166l53 9"
+                  stroke="#a4adb8"
+                  stroke-width="4"
+                />
+                <circle
+                  cx="158"
+                  cy="216"
+                  r="44"
+                  fill="#141d28"
+                  stroke="#c2cbd4"
+                  stroke-width="6"
+                />
+                <circle cx="158" cy="216" r="22" fill="#7c8997" />
+                <circle
+                  cx="480"
+                  cy="216"
+                  r="44"
+                  fill="#141d28"
+                  stroke="#c2cbd4"
+                  stroke-width="6"
+                />
+                <circle cx="480" cy="216" r="22" fill="#7c8997" />
+                <path
+                  d="M53 180l51-10-12 16H52m493-21l39 10 5 14h-36z"
+                  fill="#f3a650"
+                />
+              </svg>
+            </div>
+            <div class="visual-label">
+              <strong>01 / 03</strong><span>CONDUCE CON CONFIANZA</span>
+            </div>
+            <div class="visual-card">
+              <span>✦</span>
+              <div>
+                <strong>Listos para ayudarte</strong
+                ><small>Solicita tu próximo servicio</small>
+              </div>
+            </div>
+          </div>
         </div>
-        <div id="dashboard" hidden>
-          <div class="dashboard-top"><div><p class="section-label">MI CUENTA / <span id="profile-role"></span></p><h3>Hola, <span id="profile-name"></span>.</h3><p id="profile-email"></p></div><button id="logout" type="button" class="button button-outline-dark">Cerrar sesión</button></div>
-          <div class="dashboard-grid">
-            <section class="panel" aria-labelledby="form-title">
-              <div class="panel-heading"><div><p class="section-label">SOLICITUD DE SERVICIO</p><h3 id="form-title">Agenda tu mantenimiento</h3></div><span class="panel-icon">↗</span></div>
-              <p class="panel-description">Completa los datos para registrar tu solicitud. Todos los campos marcados con * son obligatorios.</p>
-              <form id="request-form" novalidate>
-                <div id="owner-field" class="field full" hidden><label for="owner">Cliente *</label><select id="owner" name="owner" class="form-select"></select></div>
-                <div class="form-grid">
-                  <div class="field"><label for="customer-name">Nombre del cliente *</label><input class="form-control" id="customer-name" name="customerName" maxlength="100" required></div>
-                  <div class="field"><label for="email">Correo electrónico *</label><input class="form-control" id="email" name="email" type="email" maxlength="254" required></div>
-                  <div class="field"><label for="phone">Teléfono *</label><input class="form-control" id="phone" name="phone" type="tel" inputmode="tel" placeholder="Ej. 0991234567" required></div>
-                  <div class="field"><label for="plate">Placa *</label><input class="form-control" id="plate" name="plate" placeholder="ABC-1234" maxlength="8" required></div>
-                  <div class="field"><label for="make">Marca *</label><input class="form-control" id="make" name="make" maxlength="60" required></div>
-                  <div class="field"><label for="model">Modelo *</label><input class="form-control" id="model" name="model" maxlength="60" required></div>
-                  <div class="field"><label for="year">Año *</label><input class="form-control" id="year" name="year" type="number" min="1900" step="1" required></div>
-                  <div class="field"><label for="mileage">Kilometraje *</label><input class="form-control" id="mileage" name="mileage" type="number" min="0" step="1" required></div>
-                  <div class="field full"><label for="service">Servicio *</label><select class="form-select" id="service" name="service" required><option value="">Selecciona un servicio</option><option>Cambio de aceite</option><option>Revisión de frenos</option><option>Revisión general</option><option>Alineación y balanceo</option></select></div>
-                  <div class="field"><label for="date">Fecha *</label><input class="form-control" id="date" name="date" type="date" required></div>
-                  <div class="field"><label for="time">Hora *</label><input class="form-control" id="time" name="time" type="time" min="08:00" max="18:00" required><small>Horario de demostración: 08:00 a 18:00.</small></div>
-                  <fieldset class="field full"><legend>Preferencia de contacto *</legend><div class="choices"><label><input type="radio" name="contact" value="Teléfono" required> Teléfono</label><label><input type="radio" name="contact" value="Correo"> Correo</label></div></fieldset>
-                  <fieldset class="field full"><legend>Observaciones adicionales</legend><div class="choices"><label><input type="checkbox" name="extras" value="Solicitar presupuesto"> Solicitar presupuesto</label><label><input type="checkbox" name="extras" value="Revisión preventiva"> Revisión preventiva</label></div></fieldset>
-                  <div class="field full"><label for="notes">Cuéntanos más</label><textarea class="form-control" id="notes" name="notes" rows="3" maxlength="500" placeholder="Describe cualquier detalle que debamos conocer."></textarea></div>
+        <div class="hero-bottom container">
+          <span>CONOCE MÁS</span><span>↓</span
+          ><span class="hero-bottom-line"></span
+          ><span>MANTENIMIENTO AUTOMOTRIZ</span>
+        </div>
+      </section>
+
+      <section id="nosotros" class="section about">
+        <div class="container about-grid">
+          <div>
+            <p class="section-label">01 / ACERCA DE NOSOTROS</p>
+            <h2>Más que un taller,<br /><em>tu aliado en el camino.</em></h2>
+          </div>
+          <div>
+            <p>
+              En MotorCare creemos que un vehículo bien cuidado te lleva más
+              lejos. Nuestro portal te ayuda a organizar tus solicitudes y
+              consultar su avance en un solo lugar.
+            </p>
+            <p class="about-detail">
+              Servicio claro. Atención cercana. Cada viaje cuenta.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicios" class="section services">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="section-label">02 / NUESTROS SERVICIOS</p>
+              <h2>Todo para seguir <em>en marcha.</em></h2>
+            </div>
+            <p>El cuidado que tu vehículo necesita, en el momento indicado.</p>
+          </div>
+          <div class="service-grid">
+            <article class="service-card">
+              <span class="service-number">01</span
+              ><span class="service-icon">◉</span>
+              <h3>Cambio de aceite</h3>
+              <p>Ayuda a mantener el motor lubricado y en buen estado.</p>
+            </article>
+            <article class="service-card">
+              <span class="service-number">02</span
+              ><span class="service-icon">⚙</span>
+              <h3>Revisión de frenos</h3>
+              <p>Inspección de componentes esenciales para tu seguridad.</p>
+            </article>
+            <article class="service-card">
+              <span class="service-number">03</span
+              ><span class="service-icon">◇</span>
+              <h3>Revisión general</h3>
+              <p>Una revisión preventiva para cuidar cada recorrido.</p>
+            </article>
+            <article class="service-card">
+              <span class="service-number">04</span
+              ><span class="service-icon">✳</span>
+              <h3>Alineación y balanceo</h3>
+              <p>Cuida tus neumáticos y mejora la conducción.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="mi-cuenta" class="section account-section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="section-label">03 / ÁREA DE CLIENTES</p>
+              <h2>Tu próxima parada, <em>aquí.</em></h2>
+            </div>
+            <p>Inicia sesión para registrar y consultar tus solicitudes.</p>
+          </div>
+          <div class="demo-notice">
+            <strong>Proyecto educativo.</strong> Las cuentas y sus contraseñas
+            se guardan sin protección en este navegador. No uses contraseñas ni
+            datos reales.
+          </div>
+          <div
+            id="storage-error"
+            class="error-banner"
+            role="alert"
+            hidden
+          ></div>
+          <div id="login-panel" class="login-layout">
+            <div class="login-intro">
+              <span class="login-symbol">↗</span>
+              <h3>Bienvenido<br />de nuevo.</h3>
+              <p>
+                Accede a tu espacio para gestionar el cuidado de tu vehículo.
+              </p>
+            </div>
+            <div class="login-card">
+              <div id="login-view">
+                <h3>Iniciar sesión</h3>
+                <p>Ingresa con una cuenta de demostración.</p>
+                <form id="login-form">
+                  <label for="username">Usuario</label
+                  ><input
+                    id="username"
+                    name="username"
+                    class="form-control"
+                    autocomplete="username"
+                    required
+                  />
+                  <label for="password">Contraseña</label
+                  ><input
+                    id="password"
+                    name="password"
+                    type="password"
+                    class="form-control"
+                    autocomplete="current-password"
+                    required
+                  />
+                  <button
+                    class="button button-primary form-submit"
+                    type="submit"
+                  >
+                    Ingresar <span aria-hidden="true">→</span>
+                  </button>
+                </form>
+                <p class="account-switch">
+                  ¿Aún no tienes cuenta?
+                  <button type="button" id="show-register" class="text-button">
+                    Crear cuenta
+                  </button>
+                </p>
+                <div class="demo-accounts">
+                  <strong>Cuentas de prueba</strong><br />Cliente:
+                  <code>cliente1</code> / <code>cliente123</code><br />Cliente:
+                  <code>cliente2</code> / <code>cliente123</code
+                  ><br />Administrador: <code>admin</code> /
+                  <code>admin123</code><br />Deshabilitada:
+                  <code>inactivo</code> / <code>cliente123</code>
                 </div>
-                <div id="form-error" class="form-error" role="alert" hidden></div>
-                <div class="form-actions"><button id="save-button" class="button button-primary" type="submit">Registrar solicitud <span aria-hidden="true">→</span></button><button id="cancel-edit" class="button button-outline-dark" type="button" hidden>Cancelar edición</button></div>
-              </form>
-            </section>
-            <section class="panel requests-panel" aria-labelledby="requests-title">
-              <div class="panel-heading"><div><p class="section-label">SEGUIMIENTO</p><h3 id="requests-title">Mis mantenimientos</h3></div><span class="panel-icon">↗</span></div>
-              <p class="panel-description" id="requests-description">Consulta el estado de tus solicitudes.</p>
-              <div id="request-list"></div>
-            </section>
+              </div>
+              <div id="register-view" hidden>
+                <h3>Crear cuenta</h3>
+                <p>Crea una cuenta de cliente para esta demostración.</p>
+                <form id="register-form" novalidate>
+                  <label for="register-name">Nombre completo *</label
+                  ><input
+                    id="register-name"
+                    name="name"
+                    class="form-control"
+                    maxlength="100"
+                    required
+                  />
+                  <label for="register-email"
+                    >Correo electrónico ficticio *</label
+                  ><input
+                    id="register-email"
+                    name="email"
+                    type="email"
+                    class="form-control"
+                    maxlength="254"
+                    required
+                  />
+                  <label for="register-username">Usuario *</label
+                  ><input
+                    id="register-username"
+                    name="username"
+                    class="form-control"
+                    autocomplete="off"
+                    minlength="3"
+                    maxlength="30"
+                    aria-describedby="username-help"
+                    required
+                  />
+                  <small id="username-help" class="field-help"
+                    >De 3 a 30 letras sin acentos, números o guiones
+                    bajos.</small
+                  >
+                  <label for="register-password">Contraseña de prueba *</label
+                  ><input
+                    id="register-password"
+                    name="password"
+                    type="password"
+                    class="form-control"
+                    autocomplete="new-password"
+                    minlength="6"
+                    maxlength="100"
+                    required
+                  />
+                  <label for="register-confirm">Confirmar contraseña *</label
+                  ><input
+                    id="register-confirm"
+                    name="confirm"
+                    type="password"
+                    class="form-control"
+                    autocomplete="new-password"
+                    required
+                  />
+                  <div
+                    id="register-error"
+                    class="form-error"
+                    role="alert"
+                    hidden
+                  ></div>
+                  <button
+                    class="button button-primary form-submit"
+                    type="submit"
+                  >
+                    Crear cuenta <span aria-hidden="true">→</span>
+                  </button>
+                </form>
+                <p class="account-switch">
+                  ¿Ya tienes cuenta?
+                  <button type="button" id="show-login" class="text-button">
+                    Iniciar sesión
+                  </button>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="dashboard" hidden>
+            <div class="dashboard-top">
+              <div>
+                <p class="section-label">
+                  MI CUENTA / <span id="profile-role"></span>
+                </p>
+                <h3>Hola, <span id="profile-name"></span>.</h3>
+                <p id="profile-email"></p>
+              </div>
+              <button
+                id="logout"
+                type="button"
+                class="button button-outline-dark"
+              >
+                Cerrar sesión
+              </button>
+            </div>
+            <div class="dashboard-grid">
+              <section class="panel" aria-labelledby="form-title">
+                <div class="panel-heading">
+                  <div>
+                    <p class="section-label">SOLICITUD DE SERVICIO</p>
+                    <h3 id="form-title">Agenda tu mantenimiento</h3>
+                  </div>
+                  <span class="panel-icon">↗</span>
+                </div>
+                <p class="panel-description">
+                  Completa los datos para registrar tu solicitud. Todos los
+                  campos marcados con * son obligatorios.
+                </p>
+                <form id="request-form" novalidate>
+                  <div id="owner-field" class="field full" hidden>
+                    <label for="owner">Cliente *</label
+                    ><select
+                      id="owner"
+                      name="owner"
+                      class="form-select"
+                    ></select>
+                  </div>
+                  <div class="form-grid">
+                    <div class="field">
+                      <label for="customer-name">Nombre del cliente *</label
+                      ><input
+                        class="form-control"
+                        id="customer-name"
+                        name="customerName"
+                        maxlength="100"
+                        required
+                      />
+                    </div>
+                    <div class="field">
+                      <label for="email">Correo electrónico *</label
+                      ><input
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        type="email"
+                        maxlength="254"
+                        required
+                      />
+                    </div>
+                    <div class="field">
+                      <label for="phone">Teléfono *</label
+                      ><input
+                        class="form-control"
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        inputmode="tel"
+                        placeholder="Ej. 0991234567"
+                        required
+                      />
+                    </div>
+                    <div class="field">
+                      <label for="plate">Placa *</label
+                      ><input
+                        class="form-control"
+                        id="plate"
+                        name="plate"
+                        placeholder="ABC-1234"
+                        maxlength="8"
+                        required
+                      />
+                    </div>
+                    <div class="field">
+                      <label for="make">Marca *</label
+                      ><input
+                        class="form-control"
+                        id="make"
+                        name="make"
+                        maxlength="60"
+                        required
+                      />
+                    </div>
+                    <div class="field">
+                      <label for="model">Modelo *</label
+                      ><input
+                        class="form-control"
+                        id="model"
+                        name="model"
+                        maxlength="60"
+                        required
+                      />
+                    </div>
+                    <div class="field">
+                      <label for="year">Año *</label
+                      ><input
+                        class="form-control"
+                        id="year"
+                        name="year"
+                        type="number"
+                        min="1900"
+                        step="1"
+                        required
+                      />
+                    </div>
+                    <div class="field">
+                      <label for="mileage">Kilometraje *</label
+                      ><input
+                        class="form-control"
+                        id="mileage"
+                        name="mileage"
+                        type="number"
+                        min="0"
+                        step="1"
+                        required
+                      />
+                    </div>
+                    <div class="field full">
+                      <label for="service">Servicio *</label
+                      ><select
+                        class="form-select"
+                        id="service"
+                        name="service"
+                        required
+                      >
+                        <option value="">Selecciona un servicio</option>
+                        <option>Cambio de aceite</option>
+                        <option>Revisión de frenos</option>
+                        <option>Revisión general</option>
+                        <option>Alineación y balanceo</option>
+                      </select>
+                    </div>
+                    <div class="field">
+                      <label for="date">Fecha *</label
+                      ><input
+                        class="form-control"
+                        id="date"
+                        name="date"
+                        type="date"
+                        required
+                      />
+                    </div>
+                    <div class="field">
+                      <label for="time">Hora *</label
+                      ><input
+                        class="form-control"
+                        id="time"
+                        name="time"
+                        type="time"
+                        min="08:00"
+                        max="18:00"
+                        required
+                      /><small>Horario de demostración: 08:00 a 18:00.</small>
+                    </div>
+                    <fieldset class="field full">
+                      <legend>Preferencia de contacto *</legend>
+                      <div class="choices">
+                        <label
+                          ><input
+                            type="radio"
+                            name="contact"
+                            value="Teléfono"
+                            required
+                          />
+                          Teléfono</label
+                        ><label
+                          ><input type="radio" name="contact" value="Correo" />
+                          Correo</label
+                        >
+                      </div>
+                    </fieldset>
+                    <fieldset class="field full">
+                      <legend>Observaciones adicionales</legend>
+                      <div class="choices">
+                        <label
+                          ><input
+                            type="checkbox"
+                            name="extras"
+                            value="Solicitar presupuesto"
+                          />
+                          Solicitar presupuesto</label
+                        ><label
+                          ><input
+                            type="checkbox"
+                            name="extras"
+                            value="Revisión preventiva"
+                          />
+                          Revisión preventiva</label
+                        >
+                      </div>
+                    </fieldset>
+                    <div class="field full">
+                      <label for="notes">Cuéntanos más</label
+                      ><textarea
+                        class="form-control"
+                        id="notes"
+                        name="notes"
+                        rows="3"
+                        maxlength="500"
+                        placeholder="Describe cualquier detalle que debamos conocer."
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div
+                    id="form-error"
+                    class="form-error"
+                    role="alert"
+                    hidden
+                  ></div>
+                  <div class="form-actions">
+                    <button
+                      id="save-button"
+                      class="button button-primary"
+                      type="submit"
+                    >
+                      Registrar solicitud
+                      <span aria-hidden="true">→</span></button
+                    ><button
+                      id="cancel-edit"
+                      class="button button-outline-dark"
+                      type="button"
+                      hidden
+                    >
+                      Cancelar edición
+                    </button>
+                  </div>
+                </form>
+              </section>
+              <section
+                class="panel requests-panel"
+                aria-labelledby="requests-title"
+              >
+                <div class="panel-heading">
+                  <div>
+                    <p class="section-label">SEGUIMIENTO</p>
+                    <h3 id="requests-title">Mis mantenimientos</h3>
+                  </div>
+                  <span class="panel-icon">↗</span>
+                </div>
+                <p class="panel-description" id="requests-description">
+                  Consulta el estado de tus solicitudes.
+                </p>
+                <div id="request-list"></div>
+              </section>
+            </div>
           </div>
         </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container footer-inner">
+        <a class="brand footer-brand" href="#inicio"
+          ><span class="brand-mark">M</span> MotorCare<span class="brand-dot"
+            >.</span
+          ></a
+        >
+        <p>El cuidado que te lleva más lejos.</p>
+        <small>Proyecto académico · Mantenimiento automotriz</small>
       </div>
-    </section>
-  </main>
-  <footer><div class="container footer-inner"><a class="brand footer-brand" href="#inicio"><span class="brand-mark">M</span> MotorCare<span class="brand-dot">.</span></a><p>El cuidado que te lleva más lejos.</p><small>Proyecto académico · Mantenimiento automotriz</small></div></footer>
-</body>
+    </footer>
+  </body>
 </html>
